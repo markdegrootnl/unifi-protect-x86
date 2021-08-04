@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  unifi-protect:
+    image: markdegroot/unifi-protect-x86
+    container_name: unifi-protect
+    volumes:
+      - unifi-protect-db:/var/lib/postgresql/10/main
+      - unifi-protect:/srv/unifi-protect
+    restart: unless-stopped
+    tmpfs:
+      - /srv/unifi-protect/temp
+    ports:
+     - 7080:7080
+     - 7443:7443
+     - 7444:7444
+     - 7447:7447
+     - 7550:7550
+     - 7442:7442
+
+volumes:
+  unifi-protect-db:
+  unifi-protect:

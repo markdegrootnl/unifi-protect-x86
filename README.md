@@ -20,9 +20,9 @@ docker run -d --name unifi-protect-x86  \
     markdegroot/unifi-protect-x86:latest
 ```
 
-Now you can access UniFi Protect at `https://localhost:7443/`.
+Now you can access UniFi Protect at `https://localhost:7443/`
 
-It's highly recommended that you set a [memory limit on this container](https://docs.docker.com/config/containers/resource_constraints/#limit-a-containers-access-to-memory), otherwise it will use all of your RAM over time, I'm not sure if this issue is fixed on newer ARM versions. Example below with `-m 2048m` (2Gb memory limit):
+It's highly recommended that you set a [memory limit on this container](https://docs.docker.com/config/containers/resource_constraints/#limit-a-containers-access-to-memory), otherwise it will use all of your RAM over time. Example below with `-m 2048m` (2Gb memory limit):
 
 ```bash
 docker run -d --name unifi-protect-x86  \
@@ -38,6 +38,9 @@ docker run -d --name unifi-protect-x86  \
     -v unifi-protect:/srv/unifi-protect \
     markdegroot/unifi-protect-x86:latest
 ```
+
+## Using the latest UniFi Protect apps
+In the initial setup, you have to Adopt with your UI<span>.</span>com Account, otherwise the latest versions of the Protect app for Android and iOS won't be able to connect to your Protect instance.
 
 ## Build your own container
 To build your own container put the deb file for `unifi-protect 1.13.3` (4707-Debian9_5famd64-1.13.3-85b0dd59653f41cc97b3599213a483c0.deb) in the `put-unifi-core-deb-here` folder and run:
