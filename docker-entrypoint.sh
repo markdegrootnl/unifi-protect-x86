@@ -6,8 +6,8 @@ DIR="/var/lib/postgresql/10/main"
 if [ "$(ls -A $DIR)" ]; then
     echo "database exists"
 else
-    sudo -u postgres /usr/lib/postgresql/10/bin/initdb -D $DIR
     chown -R postgres:postgres $DIR
+    sudo -u postgres /usr/lib/postgresql/10/bin/initdb -D $DIR
 fi
 
 sed -i 's/peer/trust/g' /etc/postgresql/10/main/pg_hba.conf
