@@ -4,6 +4,11 @@ services:
   unifi-protect:
     image: markdegroot/unifi-protect-x86
     container_name: unifi-protect
+    environment:
+      - PUID=999
+      - PGID=999
+      - MEM_LIMIT=1024M
+      - MEM_STARTUP=1024M
     volumes:
       - unifi-protect-db:/var/lib/postgresql/10/main
       - unifi-protect:/srv/unifi-protect
