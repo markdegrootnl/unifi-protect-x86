@@ -4,7 +4,7 @@ Run UniFi Protect in Docker on x86 hardware.
 
 ## Usage
 
-Create the directory with the correct UID and GID. otherwise at the first startup the DB won't start.
+Create the directories with the correct UID and GID. otherwise at the first startup the DB won't start.
 ```bash
 mkdir unifi-protect-db ; chown 101:103 unifi-protect-db
 mkdir unifi-protect ; chown 999: unifi-protect
