@@ -2,6 +2,8 @@
 
 Run UniFi Protect in Docker on x86 hardware.
 
+**Important**: This is version 1.13.3 of UniFi Protect which was released in 2020. UniFi stopped publishing the AMD64 binaries for UniFi Protect. We won't be supplying any more updates on the x86 version. Please take a look at [unifi-protect-arm64](https://github.com/markdegrootnl/unifi-protect-arm64) for a more recent ARM based version of this project.
+
 ## Usage
 
 Run the container as a daemon:
